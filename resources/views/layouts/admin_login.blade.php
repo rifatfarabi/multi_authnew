@@ -20,7 +20,7 @@
             <div class="col-md-3"></div>
             <div class="col-md-6">
 
-                <form action="#" class="mt-5" method="POST">
+                <form action="{{ route('login') }}" class="mt-5" method="POST">
                     @csrf
                     <div class="form-group">
                         <label for="email">Email</label>
@@ -33,6 +33,7 @@
                     <div class="form-group">
                         <input type="submit" value="Login" class="btn btn-primary mt-3" name="password">
                     </div>
+                    <input type="hidden" name="form_name" value="admin_form">
                 </form>
             </div>
         </div>

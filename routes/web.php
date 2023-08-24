@@ -23,6 +23,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('admin/login', [AdminController::class,'adminLoginForm'])->name('admin.login.form');
-Route::post('admin-login', [AdminController::class,'adminLogin'])->name('admin.login');
-Route::get('admin/dashboard', [AdminController::class,'adminDashboard'])->name('admin.dashboard');
+Route::get('admin/login', [AdminController::class,'adminLogin'])->name('admin.login');
+Route::post('admin/dashboard', [AdminController::class,'adminDashboard'])->name('admin.dashboard');

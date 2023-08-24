@@ -64,6 +64,7 @@
                                 @endif
                             </div>
                         </div>
+                        <input type="hidden" name="form_name" value="user_form">
                     </form>
                 </div>
             </div>
