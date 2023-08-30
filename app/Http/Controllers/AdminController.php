@@ -12,6 +12,7 @@ class AdminController extends Controller
     }
 
     public function adminLogin(){
+        
         return view('layouts.admin_login');
     }
 
