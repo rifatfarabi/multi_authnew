@@ -21,13 +21,16 @@
             <div class="col-md-3"></div>
             <div class="col-md-6">
 
+                @if ($errors->any())
+                    @foreach ($errors->all() as $error)
+                        <div>{{ $error }}</div>
+                    @endforeach
+                @endif
+
                 <form action="{{ route('login') }}" class="mt-5" method="POST">
                     @csrf
 
                     <div class="form-group">
-                        @if($errors->any())
-                        {{ implode('', $errors->all('<div>:message</div>')) }}
-                    @endif
                         <label for="email">Email</label>
                         <input type="email" class="form-control" name="email">
                     </div>
